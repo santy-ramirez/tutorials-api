@@ -1,13 +1,13 @@
-package com.santi.tuturial;
+package com.santi.tutorial;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TuturialApplication {
+public class TutorialApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TuturialApplication.class, args);
+		SpringApplication.run(TutorialApplication.class, args);
 	}
 
 }

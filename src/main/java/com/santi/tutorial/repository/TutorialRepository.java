@@ -1,6 +1,6 @@
-package com.santi.tuturial.repository;
+package com.santi.tutorial.repository;
 
-import com.santi.tuturial.domain.Tutorial;
+import com.santi.tutorial.domain.Tutorial;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

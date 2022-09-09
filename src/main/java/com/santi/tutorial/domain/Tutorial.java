@@ -1,11 +1,10 @@
-package com.santi.tuturial.domain;
+package com.santi.tutorial.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Entity
 @Table(name = "totorials")

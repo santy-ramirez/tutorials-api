@@ -11,8 +11,8 @@
 	<groupId>com.santi</groupId>
 	<artifactId>tuturial</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>tuturial</name>
-	<description>project the published the tutuarial</description>
+	<name>tutorial</name>
+	<description>project the published the tutorial</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -29,7 +29,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>3.0.0</version>
+		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
