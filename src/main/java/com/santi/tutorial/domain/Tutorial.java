@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "totorials")
@@ -18,4 +20,9 @@ public class Tutorial {
     private String title;
     private String description;
     private boolean published;
+
+
+
 }
+
+

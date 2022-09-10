@@ -21,4 +21,10 @@ public class TutorialController {
     public ResponseEntity<?> createTutoriales(@RequestBody TutorialDTO tutorialDTO){
         return new ResponseEntity<>(tutorialService.createTutorial(tutorialDTO), HttpStatus.OK);
     }
+
+    @GetMapping("/all")
+    public ResponseEntity<?> getAllTutoriales(){
+        return new ResponseEntity<>(tutorialService.getAllTutoriales(),HttpStatus.OK);
+    }
+
 }
