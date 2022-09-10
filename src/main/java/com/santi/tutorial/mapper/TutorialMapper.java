@@ -8,7 +8,7 @@ import org.mapstruct.*;
 public interface TutorialMapper {
 
 
-TutorialDTO toDtoTutorialDto(Tutorial tutorial);
+TutorialDTO toDtoTutorial(Tutorial tutorial);
 
 Tutorial toEntityTutorial(TutorialDTO tutorialDTO);
 
