@@ -48,4 +48,10 @@ public class TutorialController {
         return new ResponseEntity<>(tutorialService.getAllTutorialPublished(published),HttpStatus.OK);
     }
 
+    @GetMapping(params = "query")
+    public ResponseEntity<?> testQuery(@RequestParam String query){
+        return new ResponseEntity<>(tutorialService.testQuery(query),HttpStatus.OK);
+    }
+
+
 }

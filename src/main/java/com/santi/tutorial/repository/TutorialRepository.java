@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface TutorialRepository extends JpaRepository<Tutorial,Long> {
     List<Tutorial> findByPublished(Boolean published);
+    List<Tutorial> findByTitleContaining(String query);
 }

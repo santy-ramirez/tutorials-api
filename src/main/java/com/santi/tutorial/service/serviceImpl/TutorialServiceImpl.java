@@ -75,5 +75,13 @@ public class TutorialServiceImpl implements TutorialService {
         return tutorials.stream().map(tutorial -> tutorialMapper.toDtoTutorial(tutorial)).collect(Collectors.toList());
     }
 
+    @Override
+    public List<TutorialDTO> testQuery(String query) {
+        List<Tutorial> tutorials = tutorialRepository.findByTitleContaining(query);
+
+
+        return tutorials.stream().map(tutorial -> tutorialMapper.toDtoTutorial(tutorial)).collect(Collectors.toList());
+    }
+
 
 }
