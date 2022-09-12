@@ -7,6 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
+@CrossOrigin("*")
 @RestController
 @RequestMapping("api/v1/tutorial")
 public class TutorialController {
@@ -17,7 +20,7 @@ public class TutorialController {
         return tutorialService.geAll(hola);
     }
     @PostMapping
-    public ResponseEntity<?> createTutoriales(@RequestBody TutorialDTO tutorialDTO){
+    public ResponseEntity<?> createTutoriales(@RequestBody @Valid TutorialDTO tutorialDTO){
         return new ResponseEntity<>(tutorialService.createTutorial(tutorialDTO), HttpStatus.OK);
     }
 
@@ -40,7 +43,7 @@ public class TutorialController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
     @PutMapping("{id}")
-    public ResponseEntity<?> updateTutorial(@PathVariable Long id, @RequestBody  TutorialDTO tutorialDTO){
+    public ResponseEntity<?> updateTutorial(@PathVariable Long id, @RequestBody @Valid TutorialDTO tutorialDTO){
         return new ResponseEntity<>(tutorialService.updateTutorial(id,tutorialDTO),HttpStatus.OK);
     }
     @GetMapping(params = "published")
