@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("api/v1/tutorial")
 public class TutorialController {
+
+
     @Autowired
     private TutorialService  tutorialService;
     @GetMapping(params = "hola")
@@ -48,9 +50,17 @@ public class TutorialController {
         return new ResponseEntity<>(tutorialService.getAllTutorialPublished(published),HttpStatus.OK);
     }
 
-    @GetMapping(params = "query")
+   /* @GetMapping(params = "query")
     public ResponseEntity<?> testQuery(@RequestParam String query){
         return new ResponseEntity<>(tutorialService.testQuery(query),HttpStatus.OK);
+    }*/
+
+    @GetMapping("/testEspecification")
+    public ResponseEntity<?> testEspecification(
+            @RequestParam(required = false) String title
+            //@RequestParam(required = false) String description
+    ){
+     return new ResponseEntity<>(tutorialService.testEspecification(title),HttpStatus.OK);
     }
 
 

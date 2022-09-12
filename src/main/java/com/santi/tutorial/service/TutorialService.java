@@ -17,7 +17,9 @@ public interface TutorialService {
 
     public List<TutorialDTO> getAllTutorialPublished(Boolean published);
 
-    public List<TutorialDTO> testQuery(String query);
+   /* public List<TutorialDTO> testQuery(String query);*/
+
+   public List<TutorialDTO> testEspecification(String title);
 
 
 
