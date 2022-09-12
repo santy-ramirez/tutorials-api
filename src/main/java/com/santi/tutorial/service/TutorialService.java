@@ -19,7 +19,7 @@ public interface TutorialService {
 
    /* public List<TutorialDTO> testQuery(String query);*/
 
-   public List<TutorialDTO> testEspecification(String title);
+   public List<TutorialDTO> testEspecification(String title,String description);
 
 
 

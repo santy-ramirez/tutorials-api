@@ -6,7 +6,8 @@ import com.santi.tutorial.exepcion.NotFoundTutorialException;
 import com.santi.tutorial.mapper.TutorialMapper;
 import com.santi.tutorial.repository.TutorialRepository;
 import com.santi.tutorial.service.TutorialService;
-import com.santi.tutorial.specf.CustumerSpecifications;
+import com.santi.tutorial.specf.TitleSpecf;
+import com.santi.tutorial.specf.DescriptionSpecf;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
@@ -88,10 +89,8 @@ public class TutorialServiceImpl implements TutorialService {
     }*/
 
     @Override
-    public List<TutorialDTO> testEspecification(String title) {
-//Specification<Tutorial> sp = Specification.where(new CustumerSpecifications().getTutorialForTitle(title));
-
-       List<Tutorial> tutorials = tutorialRepository.findAll(Specification.where(new CustumerSpecifications(title)));
+    public List<TutorialDTO> testEspecification(String title,String description) {
+       List<Tutorial> tutorials = tutorialRepository.findAll(Specification.where(new TitleSpecf(title).or(new DescriptionSpecf(title,description))));
        return tutorials.stream().map(tutorial -> tutorialMapper.toDtoTutorial(tutorial)).collect(Collectors.toList());
     }
 

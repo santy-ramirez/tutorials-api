@@ -57,10 +57,11 @@ public class TutorialController {
 
     @GetMapping("/testEspecification")
     public ResponseEntity<?> testEspecification(
-            @RequestParam(required = false) String title
-            //@RequestParam(required = false) String description
+            @RequestParam(required = false) String title,
+            @RequestParam(required = false) String description
+
     ){
-     return new ResponseEntity<>(tutorialService.testEspecification(title),HttpStatus.OK);
+     return new ResponseEntity<>(tutorialService.testEspecification(title,description),HttpStatus.OK);
     }
 
 

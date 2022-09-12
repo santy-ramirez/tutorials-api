@@ -13,10 +13,10 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
-public class CustumerSpecifications implements Specification<Tutorial> {
+public class TitleSpecf implements Specification<Tutorial> {
         private final String title;
 
-    public CustumerSpecifications(String title) {
+    public TitleSpecf(String title) {
         this.title = title;
     }
 
@@ -28,4 +28,5 @@ public class CustumerSpecifications implements Specification<Tutorial> {
        final var titleExpresion =  criteriaBuilder.lower(root.get(Tutorial_.title));
         return criteriaBuilder.like(titleExpresion,"%"+title.toLowerCase()+"%");
     }
+
 }
